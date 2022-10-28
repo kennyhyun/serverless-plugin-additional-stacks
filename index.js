@@ -335,7 +335,7 @@ class AdditionalStacksPlugin {
         return response.Stacks && response.Stacks[0]
       })
       .then(null, err => {
-        if (err.message && err.message.match(/does not exist$/)) {
+        if (err.message && err.message.match(/does not exist/)) {
           // Stack doesn't exist yet
           return null
         } else {
